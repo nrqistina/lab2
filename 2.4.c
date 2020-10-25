@@ -3,6 +3,10 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
  
 int main(void) {
   for(int i = 1; i < 5; i++) {
@@ -16,7 +20,7 @@ int main(void) {
       printf("Parent process => PID=%d\n", getpid());
       printf("Waiting for child processes to finish...\n");
       wait(NULL);
-      printf("child process finished.\n");
+      printf("Job is done\n");
     }
   }
  
